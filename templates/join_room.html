@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Room</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
+  <h2 class="text-3xl font-semibold mb-6">Join a Room</h2>
+  {% if error %}
+    <p class="text-red-500 mb-4">{{ error }}</p>
+  {% endif %}
+  <form action="/join_room" method="post" class="space-y-4 w-full max-w-md">
+    <input type="text" name="access_key" placeholder="Room Key (e.g. 4B92FZ)" required class="w-full p-3 rounded bg-gray-800 border border-gray-600 text-white uppercase">
+    <input type="password" name="password" placeholder="Room Password (if any)" class="w-full p-3 rounded bg-gray-800 border border-gray-600 text-white">
+    <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 w-full rounded text-lg">Join</button>
+  </form>
+</body>
+</html>

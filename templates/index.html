@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonymous Chat Rooms</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-blue-50 font-sans">
+
+  <div class="flex flex-col items-center justify-center py-10">
+    <!-- Logo -->
+    <img src="static/logo.png" alt="Logo" class="w-80 h-80 rounded-xl shadow-lg mb-6">
+
+    <!-- Title -->
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Anonymous Chat Rooms</h1>
+    <p class="text-center text-gray-600 max-w-xl mb-10">
+      Join private chatrooms with unique access keys. No registration required.<br>
+      Chat anonymously with random character names. Rooms auto-delete after 5 minutes of inactivity.
+    </p>
+
+    <!-- Forms -->
+    <div class="flex flex-col md:flex-row gap-8 justify-center w-full px-4 md:px-20">
+      <!-- Create Room -->
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
+        <h2 class="text-xl font-bold mb-4">➕ Create Room</h2>
+        <form action="/create_room" method="POST" class="space-y-4">
+          <input type="text" name="room_name" placeholder="Enter room name" required class="w-full p-3 border border-gray-300 rounded">
+          <input type="password" name="password" placeholder="Enter password (optional)" class="w-full p-3 border border-gray-300 rounded">
+          <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Create Room</button>
+        </form>
+      </div>
+
+      <!-- Join Room -->
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
+        <h2 class="text-xl font-bold mb-4">🔑 Join Room</h2>
+        <form action="/join_room" method="POST" class="space-y-4">
+          <input type="text" name="access_key" placeholder="Enter access key" required class="w-full p-3 border border-gray-300 rounded">
+          <input type="password" name="password" placeholder="Enter password (if required)" class="w-full p-3 border border-gray-300 rounded">
+          <button type="submit" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">Join Room</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="mt-16 w-full px-4 md:px-20">
+      <h3 class="text-2xl font-bold text-center mb-8">Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl mb-2">💬</p>
+          <h4 class="font-bold text-lg">Real-time Chat</h4>
+          <p class="text-gray-600 text-sm">Instant messaging with WebSocket technology</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl mb-2">📎</p>
+          <h4 class="font-bold text-lg">File Sharing</h4>
+          <p class="text-gray-600 text-sm">Upload and share images and files</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-3xl mb-2">⏰</p>
+          <h4 class="font-bold text-lg">Auto-Delete</h4>
+          <p class="text-gray-600 text-sm">Rooms auto-delete after 5 minutes of inactivity</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-12 text-gray-400 text-sm">
+    </div>
+  </div>
+
+</body>
+</html>
