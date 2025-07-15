@@ -21,5 +21,11 @@ https://whisperbox-e7d2.onrender.com
 git clone https://github.com/your-username/WhisperBox.git
 cd WhisperBox
 pip install -r requirements.txt
+```
 
+## 🧠 Future Ideas
 
+- 🔒 End-to-end encryption  
+- 💬 Typing indicators  
+- 🧑‍🎨 Custom user themes or nicknames  
+- 📊 Admin dashboard for analytics  
