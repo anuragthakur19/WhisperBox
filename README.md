@@ -12,6 +12,9 @@ WhisperBox is a private, anonymous real-time chat platform where users can insta
 - 💬 **Join Popups & Typing Indicator** *(optional)* — Get notified when someone joins.
 - 🖼️ **Minimalist UI** — Responsive, clean design built with TailwindCSS.
 
+- 🔗 Live Demo 
+https://whisperbox-e7d2.onrender.com
+
 - ## 📦 Installation
 
 ```bash
@@ -19,5 +22,4 @@ git clone https://github.com/your-username/WhisperBox.git
 cd WhisperBox
 pip install -r requirements.txt
 
-🔗 Live Demo 
-https://whisperbox-e7d2.onrender.com
+
